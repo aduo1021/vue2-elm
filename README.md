@@ -1,26 +1,4 @@
-# 前言
 
-vue2的发布后自己也研究了一段时间，奈何公司的技术栈是以react为主，没有机会好好利用vue2去做一个完整的项目。虽然写了几个demo，但和写一个完整的项目还是有很大差别的。于是自己想着用空余的时间写一个项目，选择了饿了么也只是因为经常用，熟悉它的布局。之前的饿了么官网是用angular写的，最近才发现原来这段时间改成了vue，看来饿了么也入了vue的坑。
-
-既然要写一个完整的项目，就要认真对待，所以除了付款其他所有功能都尽可能的实现，包括登陆、注册、个人中心、搜索、购物车、下单等等，也包括所有我能注意到的细节也都一并做出来，所以这绝对算是一个比较大的项目。
-
-项目不使用模拟数据，所有数据均使用从官网实时获取的真实数据，最大程度实现和官网一样的功能，所以首先遇到的问题是跨域，我们启动本地服务器是获取不到官网数据的，这是跨域的。当然解决的方法很多，jsonp，nginx反向代理，webpack-dev-server的proxy，这里我用的是 http-proxy-middleware 原理都是一样的。
-
-
-__注：此项目纯属个人瞎搞，正常下单请选择饿了么官方客户端。__
-
-
-
-
-# 效果演示
-
-#### (演示效果为模拟数据，导致下拉加载的时候体验很不好，只做展示用，真实效果请下载项目并运行，方可获取真实的官网数据);
-
-[demo地址](http://test.fe.ptdev.cn/elm/)（请用chrome手机模式预览）
-   
-### 移动端扫描下方二维码
-
-![](https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/elm_ewm.png)
 
 
 
@@ -57,33 +35,6 @@ npm run build
 
 生成的elm文件夹放在服务器即可正常访问
 ```
-
-
-# 目标功能
-- [x] 定位功能 -- 完成
-- [x] 选择城市 -- 完成
-- [x] 搜索地址 -- 完成
-- [x] 展示所选地址附近商家列表 -- 完成
-- [x] 搜索美食，餐馆 -- 完成
-- [x] 根据距离、销量、评分、特色菜、配送方式等进行排序和筛选 -- 完成
-- [x] 餐馆食品列表页 -- 完成
-- [x] 购物车功能 -- 完成
-- [x] 店铺评价页面 -- 完成
-- [x] 单个食品详情页面 -- 完成
-- [x] 商家详情页 -- 完成
-- [x] 登陆、注册 -- 完成
-- [x] 修改密码 -- 完成
-- [x] 个人中心 -- 完成
-- [x] 发送短信、语音验证 -- 完成
-- [x] 下单功能 -- 完成 ✨✨🎉🎉
-- [x] 订单列表 -- 完成
-- [x] 订单详情 -- 完成
-- [ ] 帐户信息
-- [ ] 上传头像，修改用户名
-- [ ] 积分商城
-- [ ] 服务中心
-- [ ] 添加、删除、修改收货地址
-- [ ] 付款(很难实现)
 
 
 
@@ -197,93 +148,7 @@ npm run build
 
 6、项目写到现在，从 登陆注册到、首页、搜索、商家列表、购物车、下单、订单列表、个人中心 一个流程走完之后、不但对vue的理解更深一层，而且对以后掌控大型项目的时候也有非常多的帮助，做一个实际的项目才能对自己有很大的提升。
 
-7、项目已完成的页面共 22 个，最主要的购物下单功能已经实现，预计全部完成后总页面数在 35 个左右。
 
-
-# 项目截图
-
-## 城市列表页
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/home.png" width="365" height="619"/>
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/home.gif" width="365" height="619"/>
-
-
-## 搜索地址页
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/city.png" width="365" height="619"/>
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/city.gif" width="365" height="619"/>
-
-
-## 商铺列表页
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/msite.png" width="365" height="619"/>
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/msite.gif" width="365" height="619"/>
-
-
-## 商铺筛选页
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/food.png" width="365" height="619"/>
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/food.gif" width="365" height="619"/>
-
-
-## 搜索页
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/search.png" width="365" height="619"/>
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/search.gif" width="365" height="619"/>
-
-
-## 餐馆食品列表与购物车
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/shop_cart.png" width="365" height="619"/>
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/shop_cart.gif" width="365" height="619"/>
-
-
-## 餐馆评论页
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/rating.png" width="365" height="619"/>
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/rating.gif" width="365" height="619"/>
-
-
-## 食品详情页
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/fooddetail.png" width="365" height="619"/>
-
-
-## 餐馆信息页
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/shopdetail1.png" width="365" height="619"/>
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/shopdetail2.png" width="365" height="619"/>
-
-
-## 登陆页
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/login1.png" width="365" height="619"/>
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/login2.png" width="365" height="619"/>
-
-## 重置密码页
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/reset.png" width="365" height="619"/>
-
-## 个人中心
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/profile.png" width="365" height="619"/>
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/profile2.png" width="365" height="619"/>
-
-
-
-## 确认订单页
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/confirm1.png" width="365" height="619"/>
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/confirmOrder.gif" width="365" height="619"/>
-
-## 订单列表页
-
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/order.png" width="365" height="619"/>
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/order2.png" width="365" height="619"/>
-
-
-
-#### 其他页面正在开发中。。。
 
 
 # 最后
@@ -294,12 +159,10 @@ npm run build
 
 >  开发环境 macOS 10.12.3  Chrome 55
 
->  如有问题请直接在 Issues 中提，或者可以加我的QQ 1264889788
 
 >  推荐一个 react + redux 开源项目，对react感兴趣的朋友赶紧去看看。[地址在这里](https://github.com/bailicangdu/react-pxq)
 
 >  另外一个 vue2 + vuex 的入门项目，比当前的项目简单很多，非常适合入门练习。[地址在这里](https://github.com/bailicangdu/vue2-happyfri)
 
-##### 个人时间有限，还有其他的项目要做，在此感谢辰妹子，个人中心的所有页面都由她来完成，辛苦了！🙏
 
 ##### 如果觉得不错，请star一下吧 😊
